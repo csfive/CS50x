@@ -227,9 +227,12 @@ bool has_cycles(int loser, int winner)
         if (locked[loser][i])
         {
             // Check path: i -> winner
-            return has_cycles(i, winner);
-            // If it returns true, loser -> i -> winner path exists
-            // Add path: winner -> loser will create a cycle
+            if (has_cycles(i, winner))
+            {
+                return true;
+                // If it returns true, loser -> i -> winner path exists
+                // Add path: winner -> loser will create a cycle
+            }
         }
     }
 
