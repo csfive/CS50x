@@ -2,7 +2,7 @@
 
 - [x] Lab 3: Sort
 - [x] Plurality
-- [ ] Runoff
+- [x] Runoff
 - [x] Tideman
 
 ## 作业描述 Description
