@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates keyup and template literals -->
+
+<html lang="en">
+    <head>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let input = document.querySelector('input');
+                input.addEventListener('keyup', function(event) {
+                    let name = document.querySelector('p');
+                    if (input.value) {
+                        name.innerHTML = `hello, ${input.value}`;
+                    }
+                    else {
+                        name.innerHTML = 'hello, whoever you are';
+                    }
+                });
+            });
+
+        </script>
+        <title>hello</title>
+    </head>
+    <body>
+        <form>
+            <input autocomplete="off" autofocus placeholder="Name" type="text">
+        </form>
+        <p></p>
+    </body>
+</html>
