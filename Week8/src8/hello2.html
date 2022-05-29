@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates addEventListener -->
+
+<html lang="en">
+    <head>
+        <title>hello</title>
+    </head>
+    <body>
+        <form>
+            <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
+        <script>
+
+            document.querySelector('form').addEventListener('submit', function(event) {
+                alert('hello, ' + document.querySelector('#name').value);
+                event.preventDefault();
+            });
+
+        </script>
+    </body>
+</html>

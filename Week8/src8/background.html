@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<!-- Demonstrates programmatic changes to style -->
+
+<html lang="en">
+    <head>
+        <title>background</title>
+    </head>
+    <body>
+        <button id="red">R</button>
+        <button id="green">G</button>
+        <button id="blue">B</button>
+        <script>
+
+            let body = document.querySelector('body');
+            document.querySelector('#red').addEventListener('click', function() {
+                body.style.backgroundColor = 'red';
+            });
+            document.querySelector('#green').addEventListener('click', function() {
+                body.style.backgroundColor = 'green';
+            });
+            document.querySelector('#blue').addEventListener('click', function() {
+                body.style.backgroundColor = 'blue';
+            });
+
+        </script>
+    </body>
+</html>
