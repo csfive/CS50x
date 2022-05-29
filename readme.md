@@ -20,6 +20,8 @@ My solutions to problem sets and labs of Harvard's CS50x 2022:
 - [x] Problem Set 3
 - [x] Lab 4
 - [x] Problem Set 4
+- [ ] Lab 5
+- [ ] Problem Set 5
 - [ ] ...
 
 ## Links
