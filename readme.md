@@ -6,11 +6,13 @@
 
 Harvard's introductory computer courses, documents and assignments are of high quality, so I chose this course as the first stop of my computer self-study journey.
 
+![cs50x](images/cs50x.png)
+
 ## Works
 
-此仓库用于存储课程的部分资料（source code）以及我的作业，你可以点进文件夹看到**每周的作业描述以及我的完成情况**。
+此仓库用于存储课程的部分资料（source code）以及我的作业，你可以点进文件夹看到**每周的作业描述以及我的完成情况**，目前仍在更新中...
 
-This repository is used to store some of the course materials (source code) as well as my assignments. You can click on the folder to see **weekly assignments and my completion status**.
+This repository is used to store some of the course materials (source code) as well as my solutions to weekly assignments. You can click on the folder to see **a detailed description of weekly assignments and my completion status**.
 
 
 ## Links
