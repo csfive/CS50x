@@ -1,6 +1,6 @@
 ## 完成情况 Tasks
 
-- [x] Lab 5: Volume
+- [x] Lab 5: Inheritance
 - [x] Speller
 
 ## 作业描述 Description
