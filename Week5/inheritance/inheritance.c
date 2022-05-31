@@ -10,8 +10,7 @@ typedef struct person
 {
     struct person *parents[2];
     char alleles[2];
-}
-person;
+} person;
 
 const int GENERATIONS = 3;
 const int INDENT_LENGTH = 4;
@@ -40,6 +39,11 @@ int main(void)
 person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
+    person *new = malloc(sizeof(person));
+    if (new == NULL)
+    {
+        return NULL;
+    }
 
     // If there are still generations left to create
     if (generations > 1)
@@ -49,33 +53,44 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
+        new->parents[0] = parent0;
+        new->parents[1] = parent1;
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-
+        new->alleles[0] = parent0->alleles[rand() % 2];
+        new->alleles[1] = parent1->alleles[rand() % 2];
     }
 
     // If there are no generations left to create
     else
     {
         // TODO: Set parent pointers to NULL
+        new->parents[0] = NULL;
+        new->parents[1] = NULL;
 
         // TODO: Randomly assign alleles
-
+        new->alleles[0] = random_allele();
+        new->alleles[1] = random_allele();
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return new;
 }
 
 // Free `p` and all ancestors of `p`.
 void free_family(person *p)
 {
     // TODO: Handle base case
-
+    if (p == NULL)
+    {
+        return;
+    }
     // TODO: Free parents recursively
+    free_family(p->parents[0]);
+    free_family(p->parents[1]);
 
     // TODO: Free child
-
+    free(p);
 }
 
 // Print each family member and their alleles.
