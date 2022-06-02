@@ -19,3 +19,4 @@ This repository is used to store some of the course materials (source code) as w
 
 - 课程链接 Course Link：https://cs50.harvard.edu/x/2022/
 - 我的博客 My Blog：https://mancuoj.vercel.app/cs50x
+- QQ频道：[进来聊天 or 提问😊](https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W4Rb9l&appChannel=share&businessType=9&from=246610&biz=ka)
