@@ -1,4 +1,3 @@
-// 不知道为什么过不了最后一个case，存在内存泄漏的问题，实在不知道怎么改了
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
@@ -38,7 +37,7 @@ bool check(const char *word)
 
 bool load(const char *dictionary)
 {
-    root = malloc(sizeof(node));
+    root = calloc(1, sizeof(node));
     FILE *dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
@@ -60,7 +59,7 @@ bool load(const char *dictionary)
             int idx = index(c);
             if (cur->son[idx] == NULL)
             {
-                cur->son[idx] = malloc(sizeof(node));
+                cur->son[idx] = calloc(1, sizeof(node));
             }
             cur = cur->son[idx];
         }
