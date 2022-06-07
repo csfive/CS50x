@@ -31,7 +31,7 @@ int dict_size = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO: Check the spelling
+    // TODO
     int num = hash(word);
     node *n = table[num];
     while (n != NULL)
@@ -48,14 +48,14 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
+    // TODO
     return toupper(word[0]) - 'A';
 }
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO: Load all the data into hash table
+    // TODO
     FILE *dict = fopen(dictionary, "r");
     if (dict == NULL)
     {
