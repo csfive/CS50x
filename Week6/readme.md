@@ -11,7 +11,7 @@
 
 ## 作业描述 Description
 
-1. Lab 6: World Cup
+1. [Lab 6: World Cup](https://cs50.harvard.edu/x/2022/labs/6/)
 2. Submit [Hello](https://cs50.harvard.edu/x/2022/psets/6/hello/) in Python
 3. Submit one of:
    - [this version of Mario](https://cs50.harvard.edu/x/2022/psets/6/mario/less/) in Python, if feeling less comfortable
