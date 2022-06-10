@@ -5,5 +5,5 @@
 
 ## 作业描述 Description
 
-1. [Lab 8: Trivia](https://cs50.harvard.edu/x/2022/labs/8/)
-2. Submit [Homepage](https://cs50.harvard.edu/x/2022/psets/8/homepage/)
+0. [Lab 8: Trivia](https://cs50.harvard.edu/x/2022/labs/8/)
+1. Submit [Homepage](https://cs50.harvard.edu/x/2022/psets/8/homepage/)
