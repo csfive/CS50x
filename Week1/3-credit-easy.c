@@ -29,13 +29,12 @@ int main(void)
             {
                 checksum += tmp;
             }
-            flag = false;
         }
         else
         {
             checksum += tmp;
-            flag = true;
         }
+        flag = !flag;
     }
 
     if (checksum % 10 != 0)
