@@ -1,4 +1,4 @@
-## 完成情况 Tasks
+## Achievement
 
 - [x] Lab 6: World Cup
 - [x] Sentimental / Hello 
@@ -9,7 +9,7 @@
 - [x] Sentimental / Readability
 - [x] DNA
 
-## 作业描述 Description
+## Description
 
 0. [Lab 6: World Cup](https://cs50.harvard.edu/x/2022/labs/6/)
 1. Submit [Hello](https://cs50.harvard.edu/x/2022/psets/6/hello/) in Python

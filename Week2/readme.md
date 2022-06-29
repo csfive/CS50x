@@ -1,11 +1,11 @@
-## 完成情况 Tasks
+## Achievement
 
 - [x] Lab 2: Scrabble
 - [x] Readability
 - [ ] Caesar
 - [x] Substitution
 
-## 作业描述 Description
+## Description
 
 0. [Lab 2: Scrabble](https://cs50.harvard.edu/x/2022/labs/2/#lab-2-scrabble)
 1. Submit [Readability](https://cs50.harvard.edu/x/2022/psets/2/readability/)

@@ -1,11 +1,11 @@
-## 完成情况 Tasks
+## Achievement
 
 - [x] Lab 4: Volume
 - [x] Filter (Less)
 - [x] Filter (More)
 - [x] Recover
 
-## 作业描述 Description
+## Description
 
 0. [Lab 4: Volume](https://cs50.harvard.edu/x/2022/labs/4/)
 1. Submit one of:

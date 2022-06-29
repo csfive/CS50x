@@ -1,9 +1,9 @@
-## 完成情况 Tasks
+## Achievement
 
 - [x] Form
 - [x] .sb3 file
 
-## 作业描述 Description
+## Description
 
 1. Submit [this form](https://forms.cs50.io/755f67a3-052d-44af-8d16-b0209fa4dafb).
 2. Visit [this link](https://submit.cs50.io/invites/9770b67479384c4d8c37790779e466d9), log in with your GitHub account, and click **Authorize cs50**. Check the box indicating that you’d like to grant course staff access to your submissions, and click **Join course**.

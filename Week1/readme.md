@@ -1,4 +1,4 @@
-## 完成情况 Tasks
+## Achievement
 
 - [x] Hello
 - [ ] Mario (Less)
@@ -7,7 +7,7 @@
 - [x] Credit
 
 
-## 作业描述 Description
+## Description
 
 1. Submit [Hello](https://cs50.harvard.edu/x/2022/psets/1/hello/)
 2. Submit one of:
