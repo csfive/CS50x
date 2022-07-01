@@ -1,0 +1,80 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+#nav {
+    font-family: 'Arima', cursive;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+#title {
+    font-size: 80px;
+    font-weight: bold;
+    background: linear-gradient(45deg, red, blue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+.carousel-item img {
+    min-height: 600px;
+}
+
+main {
+    font-family: 'Poppins', sans-serif;
+    max-width: 70vw;
+    margin: 50px auto;
+}
+
+section {
+    margin: 30px auto;
+    max-width: 55vw;
+}
+
+section h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #e34b59;
+}
+
+section h4 {
+    font-weight: bold;
+}
+
+section p {
+    font-size: x-large;
+}
+
+section blockquote {
+    font-size: x-large;
+    font-style: italic;
+    padding-left: 10px;
+    color: gray;
+    border-left: gray 4px solid;
+}
+
+
+.card {
+    border-radius: 15px;
+}
+
+.card-title {
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.card-body {
+    font-size: x-large;
+}
+
+.btn {
+    font-size: x-large;
+    margin: 8px 8px;
+    padding: 8px 15px;
+    border-radius: 7px;
+}

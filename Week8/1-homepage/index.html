@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.js"></script>
+
+    <!-- my -->
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light shadow">
+            <div class="container-fluid" id="nav">
+                <a class="navbar-brand text-danger p-2 fs-1 fw-bold" href="./index.html">
+                    CS50x
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse px-5 p-2 fs-3 justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                        <a class="nav-link" href="pages/about.html">About</a>
+                        <a class="nav-link" href="pages/works.html">Works</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3 id="title" class="mb-4">
+                This is CS50x
+            </h3>
+            <h3 class="mb-5">
+                This page is for problem set 8: Homepage — Mancuoj
+            </h3>
+            <div class="mb-5">
+                <a href="https://cs50.harvard.edu/x/2022/" class="btn btn-danger shadow px-4 py-3 rounded-pill me-4">Get Started</a>
+                <a href="https://github.com/mancuoj/CS50x" class="btn btn-light shadow px-4 py-3 rounded-pill">Github</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="row row-cols-1 row-cols-md-2 g-5">
+                <div class="col">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <p>
+                                Introduction to the intellectual enterprises of computer science and the art of programming.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <p>
+                                Topics include abstraction, algorithms, data structures, encapsulation, security, software engineering, and so on.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <p>
+                                Languages include C, Python, and SQL plus HTML, CSS, and JavaScript.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <p>
+                                Problem sets inspired by the arts, humanities, social sciences, and sciences. Course culminates in a final
+                                project.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="public/cs.png" class="d-block w-100" alt="cs50">
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="public/cs_1.png" class="d-block w-100" alt="cs50">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="public/cs_2.png" class="d-block w-100" alt="cs50">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
