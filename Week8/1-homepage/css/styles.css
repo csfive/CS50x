@@ -78,3 +78,13 @@ section blockquote {
     padding: 8px 15px;
     border-radius: 7px;
 }
+
+@media (max-width: 768px) {
+    main {
+        max-width: 85vw;
+    }
+
+    section {
+        max-width: 75vw;
+    }
+}
