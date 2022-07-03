@@ -179,27 +179,20 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int strength[pair_count];
-    for (int i = 0; i < pair_count; i++)
-    {
-        pair p = pairs[i];
-        strength[i] = preferences[p.winner][p.loser] - preferences[p.loser][p.winner];
-    }
-
-    // Selection sort
     for (int i = 0; i < pair_count; i++)
     {
         int max = i;
         for (int j = i + 1; j < pair_count; j++)
         {
-            if (strength[j] > strength[max])
+            if (preferences[pairs[j].winner][pairs[j].loser] > preferences[pairs[max].winner][pairs[max].loser])
             {
                 max = j;
             }
         }
-        pair tmp = pairs[max];
-        pairs[max] = pairs[i];
-        pairs[i] = tmp;
+
+        pair tmp = pairs[i];
+        pairs[i] = pairs[max];
+        pairs[max] = tmp;
     }
 
     /**
