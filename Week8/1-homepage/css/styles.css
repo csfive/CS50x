@@ -12,6 +12,7 @@
     font-size: 80px;
     font-weight: bold;
     background: linear-gradient(45deg, red, blue);
+    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -21,7 +22,7 @@ a {
 }
 
 .carousel-item img {
-    min-height: 600px;
+    object-fit: contain;
 }
 
 main {
