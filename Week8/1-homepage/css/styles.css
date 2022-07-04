@@ -9,7 +9,7 @@
 }
 
 #title {
-    font-size: 80px;
+    font-size: 5rem;
     font-weight: bold;
     background: linear-gradient(45deg, red, blue);
     background-clip: text;
@@ -27,19 +27,19 @@ a {
 
 main {
     font-family: 'Poppins', sans-serif;
-    max-width: 70vw;
+    max-width: 75vw;
     margin: 50px auto;
 }
 
 section {
     margin: 30px auto;
-    max-width: 55vw;
+    max-width: 60vw;
 }
 
 section h1 {
     text-align: center;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin: 2rem 0;
     color: #e34b59;
 }
 
@@ -57,8 +57,8 @@ section blockquote {
     padding-left: 10px;
     color: gray;
     border-left: gray 4px solid;
+    margin: 1rem 0;
 }
-
 
 .card {
     border-radius: 15px;
@@ -77,14 +77,13 @@ section blockquote {
     font-size: x-large;
     margin: 8px 8px;
     padding: 8px 15px;
-    border-radius: 7px;
+    border-radius: 0.7rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     main {
         max-width: 85vw;
     }
-
     section {
         max-width: 75vw;
     }
