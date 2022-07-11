@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order["symbol"] }}</td>
+            <td>{{ order["name"] }}</td>
+            <td>{{ order["status"] }}</td>
+            <td>{{ order["shares"] }}</td>
+            <td>{{ order["price"] | usd }}</td>
+            <td>{{ order["timestamp"] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
