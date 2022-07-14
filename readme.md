@@ -1,18 +1,23 @@
 # CS50x
 
-Harvard CS50x — 2022 solutions😎
+Harvard CS50x — 2022 solutions 😎
 
 ## What is it?
 
-Harvard's introductory computer courses, documents and assignments are of high quality😽
+Introduction to Computer Science from Harvard, better known as CS50, is the largest course on the Harvard campus that are open to learners of all backgrounds looking to explore computer science, mobile app and game development, business technologies, and the art of programming.
 
-So I chose this course as the first stop of my computer self-study journey.
+✅ Videos
+✅ Lab & Problem Set & Final Project
+✅ Slides & Notes
+✅ Auto Grader
+
+Because of its comprehensive course configuration, I chose it as the first stop on my computer learning journey ✈️
 
 ![cs50](images/CS50.png)
 
 ## Works
 
-This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement🌴
+This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement 🌴
 
 The picture below shows my certificate after completing all the assignments:
 
