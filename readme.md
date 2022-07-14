@@ -24,7 +24,9 @@ Because of its comprehensive course configuration, I chose it as the first stop 
 
 ## Works
 
-This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement 🌴
+This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement.
+
+I finished this course on July 13, and my next stop is [UCB CS61A](https://github.com/mancuoj/CS61A) 🌴
 
 The picture below shows my certificate after completing all the assignments:
 
