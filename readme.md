@@ -1,6 +1,6 @@
 # CS50x
 
-Harvard CS50x — 2022 solutions 😎
+Harvard CS50x — 2022 Solutions 😎
 
 - [Course Link](https://cs50.harvard.edu/x/2022/)
 - [My Blog](https://mancuoj.vercel.app/cs50x)
