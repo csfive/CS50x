@@ -1,12 +1,20 @@
-## What is CS50x?
+# CS50x
 
-Harvard's introductory computer courses, documents and assignments are of high quality, so I chose this course as the first stop of my computer self-study journey.
+Harvard CS50x — 2022 solutions😎
+
+## What is it?
+
+Harvard's introductory computer courses, documents and assignments are of high quality😽
+
+So I chose this course as the first stop of my computer self-study journey.
 
 ![cs50](images/CS50.png)
 
 ## Works
 
-This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement.
+This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement🌴
+
+The picture below shows my certificate after completing all the assignments:
 
 ![cs50x](images/CS50x.png)
 
