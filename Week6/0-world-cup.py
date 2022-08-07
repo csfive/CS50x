@@ -4,12 +4,11 @@ import csv
 import sys
 import random
 
-# Number of simluations to run
+# Number of simulation to run
 N = 1000
 
 
 def main():
-
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
@@ -61,7 +60,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    while (len(teams) > 1):
+    while len(teams) > 1:
         teams = simulate_round(teams)
     return teams[0]["team"]
 

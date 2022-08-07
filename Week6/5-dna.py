@@ -25,7 +25,7 @@ def main():
     for i in range(len(data)):
         matches = 0
         for j in range(1, len(reader.fieldnames)):
-            if int(data[i][reader.fieldnames[j]]) == STR[j-1]:
+            if int(data[i][reader.fieldnames[j]]) == STR[j - 1]:
                 matches += 1
             if matches == len(reader.fieldnames) - 1:
                 print(data[i]['name'])
@@ -34,7 +34,7 @@ def main():
 
 
 def longest_match(sequence, subsequence):
-    """Returns length of longest run of subsequence in sequence."""
+    """Returns length of the longest run of subsequence in sequence."""
 
     # Initialize variables
     longest_run = 0
