@@ -41,7 +41,7 @@ int compute_score(string word)
     {
         if (isalpha(word[i]))
         {
-            int num = toupper(word[i]) - 65;
+            int num = toupper(word[i]) - 'A';
             score += POINTS[num];
         }
     }

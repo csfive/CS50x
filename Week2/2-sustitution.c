@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     string key = argv[1];
     for (int i = 0; i < 26; i++)
     {
-        exist[toupper(key[i]) - 65]++;
+        exist[toupper(key[i]) - 'A']++;
     }
     for (int i = 0; i < 26; i++)
     {
@@ -37,11 +37,11 @@ int main(int argc, string argv[])
         {
             if (isupper(text[i]))
             {
-                text[i] = toupper(key[text[i] - 65]);
+                text[i] = toupper(key[text[i] - 'A']);
             }
             else
             {
-                text[i] = tolower(key[text[i] - 97]);
+                text[i] = tolower(key[text[i] - 'a']);
             }
         }
     }
