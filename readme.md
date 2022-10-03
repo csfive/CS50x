@@ -1,6 +1,4 @@
-# CS50x
-
-Harvard CS50x — 2022 Solutions 😎
+# Harvard CS50x — 2022
 
 -   [Course Link](https://cs50.harvard.edu/x/2022/)
 -   [My Blog](https://mancuoj.vercel.app/cs50x)
@@ -10,25 +8,10 @@ Harvard CS50x — 2022 Solutions 😎
 
 **If you have a better solution for any problem set, PR welcome!**
 
-## What is it?
 
-Introduction to Computer Science from Harvard, better known as CS50, is the largest course on the Harvard campus that are open to learners of all backgrounds looking to explore computer science, mobile app and game development, business technologies, and the art of programming.
-
--   ✅ Videos
--   ✅ Lab & Problem Set & Final Project
--   ✅ Slides & Notes
--   ✅ Auto Grader
-
-Because of its comprehensive course configuration, I chose it as the first stop on my computer learning journey ✈️
-
-![cs50](images/CS50.png)
 
 ## Works
 
-This repository is used to store my solutions to weekly assignments. You can click on the folder to see a detailed description of weekly assignments and my achievement.
-
-I finished this course on July 13, and my next stop is [UCB CS61A](https://github.com/mancuoj/CS61A) 🌴
-
-The picture below shows my certificate after completing all the assignments:
+I finished it on July 13, and my next stop is [UCB CS61A](https://github.com/mancuoj/CS61A) 🌴
 
 ![cs50x](images/CS50x.png)
