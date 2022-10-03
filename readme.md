@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-Harvard CS50x — 2022
+Harvard CS50x — 2022 👀
 </p>
 
 <p align="center">
@@ -22,11 +22,11 @@ For Reference Only
 </pre>
 
 
-I leave only the file that needs to be modified for each assignment.
+Leave only the file that needs to be modified for each assignment.
 
-You can click into the folder to view the weekly assignments and completion of my assignments.
+Click into the folder to view the weekly assignments and my completion.
 
-I finished it on July 13, and my next stop is [UCB CS61A](https://github.com/mancuoj/CS61A) 🌴
+I finished on 07/13, and my next stop ➡️ [UCB CS61A](https://github.com/mancuoj/CS61A)
 
 <p align="center">
 <a href="https://certificates.cs50.io/1c5ca55b-bcec-4c2a-92f1-76ff3b084435" target="_blank">
