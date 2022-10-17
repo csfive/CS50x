@@ -10,7 +10,7 @@ Harvard CS50x — 2022
  <a href="https://cs50.harvard.edu/x/2022/">course link</a> | 
   <a href="https://mancuoj.vercel.app/cs50x/">blog</a> |
   <a href="https://pset8.netlify.app/">pset 8</a> |
-  <a href="https://github.com/mancuoj/tower-defense/">final project</a>
+  <a href="https://github.com/mancuoj/watchlist">final project</a>
 </p>
 
 
