@@ -2,9 +2,8 @@ import os
 from datetime import datetime
 
 from cs50 import SQL
-from flask import Flask, flash, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session
 from flask_session import Session
-from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, lookup, usd
@@ -44,10 +43,11 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
-    cash = db.execute("SELECT cash FROM users WHERE id = ?",
-                      session["user_id"])
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
     orders = db.execute(
-        "SELECT symbol, name, sum(shares) as sumshares, price FROM orders WHERE user_id = ? GROUP BY symbol", session["user_id"])
+        "SELECT symbol, name, sum(shares) as sumshares, price FROM orders WHERE user_id = ? GROUP BY symbol",
+        session["user_id"],
+    )
     account = cash[0]["cash"]
     for order in orders:
         name = order["name"]
@@ -56,7 +56,9 @@ def index():
         order["total"] = total
         order["price"] = order["price"]
         account += total
-    return render_template("index.html", orders=orders, cash=cash[0]["cash"], account=account)
+    return render_template(
+        "index.html", orders=orders, cash=cash[0]["cash"], account=account
+    )
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -81,17 +83,24 @@ def buy():
         except ValueError:
             return apology("Invalid number")
 
-        row = db.execute("SELECT cash FROM users where id = ?",
-                         session["user_id"])
+        row = db.execute("SELECT cash FROM users where id = ?", session["user_id"])
         cash = row[0]["cash"]
         balance = cash - shares * quote["price"]
         if balance < 0:
             return apology("insufficient balance")
 
-        db.execute("UPDATE users SET cash = ? WHERE id = ?",
-                   balance, session["user_id"])
-        db.execute("INSERT INTO orders (user_id, symbol, shares, name, price, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
-                   session["user_id"], symbol.upper(), shares, quote["name"], quote["price"], datetime.now())
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", balance, session["user_id"]
+        )
+        db.execute(
+            "INSERT INTO orders (user_id, symbol, shares, name, price, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
+            session["user_id"],
+            symbol.upper(),
+            shares,
+            quote["name"],
+            quote["price"],
+            datetime.now(),
+        )
         return redirect("/")
 
 
@@ -100,7 +109,9 @@ def buy():
 def history():
     """Show history of transactions"""
     orders = db.execute(
-        "SELECT symbol, name, shares, price, timestamp FROM orders WHERE user_id = ?", session["user_id"])
+        "SELECT symbol, name, shares, price, timestamp FROM orders WHERE user_id = ?",
+        session["user_id"],
+    )
     if not orders:
         return apology("No history", 403)
     else:
@@ -131,11 +142,14 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?",
-                          request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], request.form.get("password")
+        ):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -188,12 +202,15 @@ def register():
         if not name or not ps1 or not ps1:
             return apology("please provide username and password!")
         if ps1 != ps2:
-            return apology("password and confirmation don't match~")
+            return apology("password and confirmation don't match")
         if db.execute("SELECT * FROM users WHERE username = ?", name):
             return apology("user already exist!")
 
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)",
-                   name, generate_password_hash(ps1))
+        db.execute(
+            "INSERT INTO users (username, hash) VALUES (?, ?)",
+            name,
+            generate_password_hash(ps1),
+        )
         return redirect("/")
 
 
@@ -203,7 +220,9 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         symbols = db.execute(
-            "SELECT symbol FROM orders WHERE user_id = ? GROUP BY symbol", session["user_id"])
+            "SELECT symbol FROM orders WHERE user_id = ? GROUP BY symbol",
+            session["user_id"],
+        )
         return render_template("sell.html", symbol=symbols)
     else:
         symbol = request.form.get("symbol")
@@ -216,17 +235,27 @@ def sell():
             return apology("Invalid symbol or shares")
 
         sumshares = db.execute(
-            "SELECT symbol, price, name, SUM(shares) as sumshares FROM orders WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
+            "SELECT symbol, price, name, SUM(shares) as sumshares FROM orders WHERE user_id = ? AND symbol = ?",
+            session["user_id"],
+            symbol,
+        )
 
         if shares > sumshares[0]["sumshares"]:
             return apology("You don't have so many shares")
 
-        db.execute("INSERT INTO orders (user_id, symbol, shares, name, price, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
-                   session["user_id"], symbol, -shares, sumshares[0]["name"], sumshares[0]["price"], datetime.now())
+        db.execute(
+            "INSERT INTO orders (user_id, symbol, shares, name, price, timestamp) VALUES (?, ?, ?, ?, ?, ?)",
+            session["user_id"],
+            symbol,
+            -shares,
+            sumshares[0]["name"],
+            sumshares[0]["price"],
+            datetime.now(),
+        )
         sold = shares * sumshares[0]["price"]
 
-        cash = db.execute("select cash FROM users WHERE id = ?",
-                          session["user_id"])[0]["cash"]
-        db.execute("UPDATE users SET cash = ? WHERE id = ?",
-                   cash + sold, session["user_id"])
+        cash = db.execute("select cash FROM users WHERE id = ?", session["user_id"])[0]["cash"]
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", cash + sold, session["user_id"]
+        )
         return redirect("/")
