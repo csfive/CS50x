@@ -24,7 +24,7 @@ bool check(const char *word)
     node *cur = root;
     for (int i = 0; word[i]; i++)
     {
-        // 考虑's的情况，单引号单独处理
+        // '
         int idx = index(word[i]);
         if (cur->son[idx] == NULL)
         {

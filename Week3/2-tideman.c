@@ -124,19 +124,6 @@ void record_preferences(int ranks[])
         }
     }
 
-    /**
-    // Test for preferences
-    printf("\n");
-    for (int i = 0; i < candidate_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("%i ", preferences[i][j]);
-        }
-        printf("\n");
-    }
-    */
-
     return;
 }
 
@@ -163,15 +150,6 @@ void add_pairs(void)
             }
         }
     }
-
-    /**
-    // Test for pairs
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("winner: %i\n", pairs[i].winner);
-        printf("loser: %i\n\n", pairs[i].loser);
-    }
-    */
     return;
 }
 
@@ -195,14 +173,6 @@ void sort_pairs(void)
         pairs[max] = tmp;
     }
 
-    /**
-    // Test for sorted pairs
-    for (int i = 0; i < pair_count; i++)
-    {
-        printf("winner: %i\n", pairs[i].winner);
-        printf("loser: %i\n\n", pairs[i].loser);
-    }
-    */
     return;
 }
 
@@ -247,7 +217,6 @@ void lock_pairs(void)
 }
 
 // Print the winner of the election
-// ./tideman Alice Bob Charlie < data.txt
 void print_winner(void)
 {
     // TODO
@@ -263,6 +232,7 @@ void print_winner(void)
                 break;
             }
         }
+
         if (!isLoser)
         {
             printf("%s\n", candidates[i]);
