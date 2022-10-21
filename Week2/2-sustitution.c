@@ -10,17 +10,21 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution key\n");
         return 1;
     }
+
     if (strlen(argv[1]) != 26)
     {
         printf("Key must contain 26 characters.\n");
         return 1;
     }
+
     int exist[26] = {0};
     string key = argv[1];
+
     for (int i = 0; i < 26; i++)
     {
         exist[toupper(key[i]) - 'A']++;
     }
+    
     for (int i = 0; i < 26; i++)
     {
         if (exist[i] != 1)

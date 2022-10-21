@@ -52,7 +52,6 @@ int count_words(string text)
             cnt++;
         }
     }
-    // 最后一个单词没有空格，故+1
     return cnt + 1;
 }
 
