@@ -29,7 +29,12 @@ Finished on 07/13, and my next stop ➡️ [UCB CS61A](https://github.com/mancuo
 
 <p align="center">
 <a href="https://certificates.cs50.io/1c5ca55b-bcec-4c2a-92f1-76ff3b084435" target="_blank">
-<img src="./images/CS50x.png" alt="certificates"/>
+<img src="./images/CS50x.png" alt="certificates" />
 </a>
 </p>
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mancuoj/cs50x&type=Date)](https://star-history.com/#mancuoj/cs50x&Date)
 
