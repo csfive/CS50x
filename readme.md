@@ -9,9 +9,9 @@ Harvard CS50x — 2022
 </h1>
 
 <p align="center">
-  <a href="https://cs50.harvard.edu/x/2022/">course link</a> |
-  <a href="https://pset8.netlify.app/">pset 8</a> |
-  <a href="https://github.com/mancuoj/watchlist">final project</a>
+  <a href="https://cs50.harvard.edu/x/2022/">Course Link</a> |
+  <a href="https://pset8.netlify.app/">PSet 8</a> | 
+  <a href="https://github.com/mancuoj/watchlist">Final Project</a>
 </p>
 
 
@@ -34,9 +34,4 @@ Finished on 07/13, and my next stop ➡️ [UCB CS61A](https://github.com/mancuo
 <img src="./images/CS50x.png" alt="certificates" />
 </a>
 </p>
-
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mancuoj/cs50x&type=Date)](https://star-history.com/#mancuoj/cs50x&Date)
 
