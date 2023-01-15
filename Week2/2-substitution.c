@@ -29,7 +29,7 @@ int main(int argc, string argv[])
     {
         if (exist[i] != 1)
         {
-            printf("Key must contain 26 characters.\n");
+            printf("Key must not contain repeated characters.\n");
             return 1;
         }
     }
