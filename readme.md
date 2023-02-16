@@ -30,9 +30,7 @@ Click into the folder to view the weekly assignments and my completion.
 
 Finished on 22/07/13, and the next stop is [CS61A](https://github.com/mancuoj/CS61A).
 
-<p align="center">
-<a href="https://certificates.cs50.io/1c5ca55b-bcec-4c2a-92f1-76ff3b084435" target="_blank">
-<img src="./images/CS50x.png" alt="certificates" />
+<a href="https://certificates.cs50.io/1c5ca55b-bcec-4c2a-92f1-76ff3b084435.png">
+  <img src="./images/CS50x.png" alt="certificates" />
 </a>
-</p>
 
