@@ -1,27 +1,42 @@
-import csv
-import sys
+import csv  # Import the csv library to read and write CSV files
+import sys  # Import the sys library to access command-line arguments
 
 
 def main():
-    # TODO: Check for command-line usage
+    # Check for command-line usage
+    # Check if the number of command-line arguments is not equal to 3
+    # If there are not enough arguments, exit the program
     if len(sys.argv) != 3:
         sys.exit()
 
-    # TODO: Read database file into a variable
+    # Read database file into a variable
+    # Open the file specified in the first command-line argument in read mode
+    # Use csv.DictReader to read the file and create a list of dictionaries
+    # Save the list of dictionaries in the data variable
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         data = list(reader)
-
-    # TODO: Read DNA sequence file into a variable
+    # Read DNA sequence file into a variable
+    # Open the file specified in the second command-line argument in read mode
+    # Read the contents of the file and save it in the seq variable
     with open(sys.argv[2], "r") as file:
         seq = file.read()
 
-    # TODO: Find longest match of each STR in DNA sequence
+    # Find longest match of each STR in DNA sequence
+    # Create an empty list called STR
+    # Loop over all the STRs in the database (except for the first column)
+    # Call the longest_match function to find the longest match of the current STR in the DNA sequence
+    # Append the length of the longest match to the STR list
     STR = []
     for i in range(1, len(reader.fieldnames)):
         STR.append(longest_match(seq, reader.fieldnames[i]))
 
-    # TODO: Check database for matching profiles
+    # Check database for matching profiles
+    # Loop over all the people in the database
+    # For each person, loop over all the STRs in the database (except for the first column)
+    # If the length of the longest match of the current STR in the DNA sequence matches the value in the database, increment a counter
+    # If the counter is equal to the number of STRs (except for the first column), print the name of the person and exit the program
+    # If there are no matches, print "No match"
     for i in range(len(data)):
         matches = 0
         for j in range(1, len(reader.fieldnames)):
@@ -71,4 +86,5 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-main()
+main()  # Call main function to execute code
+
