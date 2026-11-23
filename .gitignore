@@ -1,0 +1,8 @@
+.DS_Store
+*.o
+*.out
+*.dSYM/
+a.out
+__pycache__/
+*.pyc
+.venv/
