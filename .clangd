@@ -4,3 +4,4 @@ CompileFlags:
     - -std=c11
     - -Wall
     - -Wextra
+    - -Wshadow

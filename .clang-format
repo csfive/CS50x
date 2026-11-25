@@ -1,11 +1,15 @@
 BasedOnStyle: LLVM
-IndentWidth: 4
-UseTab: Never
-BreakBeforeBraces: Allman
-PointerAlignment: Right
-SpaceAfterCStyleCast: true
-AllowShortIfStatementsOnASingleLine: Never
-AllowShortLoopsOnASingleLine: false
-AllowShortBlocksOnASingleLine: Never
-AllowShortFunctionsOnASingleLine: None
+AllowShortFunctionsOnASingleLine: Empty
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: true
+  AfterControlStatement: Always
+  AfterFunction: true
+  AfterStruct: true
+  BeforeElse: true
+  BeforeWhile: true
 ColumnLimit: 100
+IndentCaseLabels: true
+IndentWidth: 4
+SpaceAfterCStyleCast: true
+TabWidth: 4

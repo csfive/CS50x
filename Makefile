@@ -2,11 +2,13 @@ export C_INCLUDE_PATH := /opt/homebrew/include
 export LIBRARY_PATH   := /opt/homebrew/lib
 
 CC      := clang
-CFLAGS  := -std=c11 -Wall -Wextra -ggdb3 -O0
+CFLAGS  := -fsanitize=signed-integer-overflow -fsanitize=undefined -fsanitize=address \
+           -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra \
+           -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow
 LDLIBS  := -lcs50 -lm
 YEAR    ?= 2026
 
-ACTIONS := b r s c build run style check
+ACTIONS := b r s c sub build run style check submit
 ifeq ($(filter $(firstword $(MAKECMDGOALS)),$(ACTIONS)),$(firstword $(MAKECMDGOALS)))
   NAME := $(word 2,$(MAKECMDGOALS))
   ifneq ($(NAME),)
@@ -24,7 +26,7 @@ SLUG       := $(if $(S),$(S),$(AUTO_SLUG))
 CHECK_MODE = $(if $(UPDATE),--local,--offline)
 
 .DEFAULT_GOAL := help
-.PHONY: help b build r run s style c check clean
+.PHONY: help b build r run s style c check sub submit clean
 
 help:
 	@echo "Usage:"
@@ -32,6 +34,7 @@ help:
 	@echo "  make s <name>             运行 style50 风格检查"
 	@echo "  make c <name>             离线运行 check50（-less/-more 自动映射）"
 	@echo "  make c <name> UPDATE=1    联网刷新 check50 用例库后再测"
+	@echo "  make sub <name>           提交到 CS50（submit50）"
 	@echo "  make clean                清理所有 .c 对应的编译产物与 .dSYM"
 
 b:
@@ -59,6 +62,13 @@ c:
 	cd $(DIR) && check50 $(CHECK_MODE) cs50/problems/$(YEAR)/x/$(SLUG)
 
 check: c
+
+sub:
+	@test -n "$(NAME)" || { echo "Usage: make sub <name> (e.g. make sub me)"; exit 1; }
+	@test -n "$(DIR)" || { echo "Error: '$(NAME)' not found under $(NAME)/ or 0*-*/$(NAME)/"; exit 1; }
+	cd $(DIR) && submit50 cs50/problems/$(YEAR)/x/$(SLUG)
+
+submit: sub
 
 clean:
 	@find . -maxdepth 4 -name '*.c' -exec sh -c 'for f; do rm -f "$${f%.c}"; rm -rf "$${f%.c}.dSYM"; done' _ {} +
