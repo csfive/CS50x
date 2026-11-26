@@ -3,9 +3,10 @@ export LIBRARY_PATH   := /opt/homebrew/lib
 
 CC      := clang
 CFLAGS  := -fsanitize=signed-integer-overflow -fsanitize=undefined -fsanitize=address \
-           -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra \
-           -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow
-LDLIBS  := -lcs50 -lm
+           -ferror-limit=1 -gdwarf-4 -ggdb3 -O0 -std=c23 -Wall -Werror -Wextra \
+           -Wno-gnu-folding-constant -Wno-sign-compare -Wno-unused-parameter \
+           -Wno-unused-variable -Wno-unused-but-set-variable -Wshadow
+LDLIBS  := -lcs50
 YEAR    ?= 2026
 
 ACTIONS := b r s c sub build run style check submit
