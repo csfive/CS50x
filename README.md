@@ -10,7 +10,7 @@
 | --- | --- | --- | --- | --- |
 | 0 | [Scratch](https://cs50.harvard.edu/x/weeks/0/) | [Pset 0](https://cs50.harvard.edu/x/psets/0/) | — | ⏭️ |
 | 1 | [C](https://cs50.harvard.edu/x/weeks/1/) | [Pset 1](https://cs50.harvard.edu/x/psets/1/) | [01-c](./01-c) | ✅ |
-| 2 | [Arrays](https://cs50.harvard.edu/x/weeks/2/) | [Pset 2](https://cs50.harvard.edu/x/psets/2/) | — | ⬜ |
+| 2 | [Arrays](https://cs50.harvard.edu/x/weeks/2/) | [Pset 2](https://cs50.harvard.edu/x/psets/2/) | [02-arrays](./02-arrays) | ✅ |
 | 3 | [Algorithms](https://cs50.harvard.edu/x/weeks/3/) | [Pset 3](https://cs50.harvard.edu/x/psets/3/) | — | ⬜ |
 | 4 | [Memory](https://cs50.harvard.edu/x/weeks/4/) | [Pset 4](https://cs50.harvard.edu/x/psets/4/) | — | ⬜ |
 | 5 | [Data Structures](https://cs50.harvard.edu/x/weeks/5/) | [Pset 5](https://cs50.harvard.edu/x/psets/5/) | — | ⬜ |
