@@ -23,12 +23,15 @@
 
 ## 编译与检查
 
-macOS 本地通过 Homebrew 链接 `libcs50` 编译，并配合 `style50` / `check50` 自检：
+macOS 本地通过根目录 [`Makefile`](./Makefile) 链接 Homebrew `libcs50` 并封装运行、自检与提交，直接运行 `make` 查看帮助：
 
 ```bash
-clang -Wall -Wextra -I/opt/homebrew/include -L/opt/homebrew/lib -lcs50 -lm hello.c -o hello
-style50 hello.c
-check50 cs50/problems/2026/x/me
+make r <name> [args...]   # 编译并运行（例：make r caesar 13；特殊参数用 ARGS="-1"）
+make s <name>             # 运行 style50 风格检查
+make c <name>             # 离线运行 check50（-less/-more 自动映射）
+make c <name> UPDATE=1    # 联网刷新 check50 用例库后再测
+make sub <name>           # 提交到 CS50（submit50）
+make clean                # 清理所有 .c 对应的编译产物与 .dSYM
 ```
 
 ## 资源

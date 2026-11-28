@@ -23,12 +23,15 @@ Learning Harvard [CS50x](https://cs50.harvard.edu/x/) from scratch to internaliz
 
 ## Build & Check
 
-Compile locally on macOS with Homebrew `libcs50`, and verify with `style50` / `check50`:
+Local builds, runs, `style50` / `check50` checks, and submissions on macOS are handled by the root [`Makefile`](./Makefile) (linking Homebrew `libcs50`). Run `make` for help:
 
 ```bash
-clang -Wall -Wextra -I/opt/homebrew/include -L/opt/homebrew/lib -lcs50 -lm hello.c -o hello
-style50 hello.c
-check50 cs50/problems/2026/x/me
+make r <name> [args...]   # Compile and run (e.g. make r caesar 13; use ARGS="-1" for flags)
+make s <name>             # Run style50 style check
+make c <name>             # Run check50 offline (-less/-more mapped automatically)
+make c <name> UPDATE=1    # Refresh check50 checks online before testing
+make sub <name>           # Submit to CS50 (submit50)
+make clean                # Remove compiled binaries and .dSYM bundles for all .c files
 ```
 
 ## Resources
