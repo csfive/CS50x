@@ -16,6 +16,10 @@ ifeq ($(filter $(firstword $(MAKECMDGOALS)),$(ACTIONS)),$(firstword $(MAKECMDGOA
     $(eval .PHONY: $(NAME))
     $(eval $(NAME):;@:)
   endif
+  ifeq ($(filter $(firstword $(MAKECMDGOALS)),r run),$(firstword $(MAKECMDGOALS)))
+    RUN_ARGS := $(wordlist 3,$(words $(MAKECMDGOALS)),$(MAKECMDGOALS))
+    $(foreach a,$(filter-out $(ACTIONS) $(NAME) help clean,$(sort $(RUN_ARGS))),$(eval .PHONY: $(a))$(eval $(a):;@:))
+  endif
 endif
 
 DIR        := $(firstword $(wildcard $(NAME) 0*-*/$(NAME)))
@@ -31,7 +35,7 @@ CHECK_MODE = $(if $(UPDATE),--local,--offline)
 
 help:
 	@echo "Usage:"
-	@echo "  make r <name>             编译并运行（例：make r me）"
+	@echo "  make r <name> [args...]   编译并运行（例：make r caesar 13；特殊参数用 ARGS=\"-1\"）"
 	@echo "  make s <name>             运行 style50 风格检查"
 	@echo "  make c <name>             离线运行 check50（-less/-more 自动映射）"
 	@echo "  make c <name> UPDATE=1    联网刷新 check50 用例库后再测"
@@ -46,7 +50,7 @@ b:
 build: b
 
 r: b
-	./$(BIN)
+	./$(BIN)$(if $(RUN_ARGS), $(RUN_ARGS))$(if $(ARGS), $(ARGS))
 
 run: r
 
